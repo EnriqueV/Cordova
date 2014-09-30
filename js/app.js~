@@ -1,0 +1,23 @@
+
+var app = angular.module("app", ["onsen"]);
+ 
+app.controller('todoCtrl', ['$scope', function($scope)
+{
+    $scope.add = function(item)
+    {
+        $scope.items.push({task : item});
+        $scope.item = "";
+    }
+ 
+    $scope.remove = function(index)
+    {
+        $scope.items.splice(index, 1);
+    }
+ 
+    $scope.items = [
+        {
+            task    :     "Tareas"
+        }
+    ];
+}]);
+
